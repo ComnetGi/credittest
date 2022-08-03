@@ -6,27 +6,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <title>Document</title>
 </head>
+<title>Document</title>
+<link rel="stylesheet" href="common.css">
 
 <body>
-    <FORM ACTION="https://credit.j-payment.co.jp/link/creditcard" METHOD="POST">
-        <INPUT TYPE="HIDDEN" NAME="aid" VALUE="119502">
-        <INPUT TYPE="HIDDEN" NAME="am" VALUE="1800">
-        <INPUT TYPE="HIDDEN" NAME="tx" VALUE="180">
-        <INPUT TYPE="HIDDEN" NAME="sf" VALUE="0">
-        <INPUT TYPE="HIDDEN" NAME="jb" VALUE="CAPTURE">
-        <INPUT TYPE="HIDDEN" NAME="pn" VALUE="0783047760">
-        <INPUT TYPE="HIDDEN" NAME="em" VALUE="s.gi@comnet-network.co.jp">
-        <INPUT TYPE="HIDDEN" NAME="inm" VALUE="CICS">
-        <INPUT TYPE="HIDDEN" NAME="その他" VALUE="01,02,03">
-        <INPUT class="btn btn-primary" TYPE="submit" NAME="submit" VALUE="購入">
-    </FORM>
+    <header>
+        <img src="https://source.unsplash.com/random/100x100" alt="">
+        <h1>RobotPaymentクレジット決済機能テスト</h1>
+        <!-- <nav>
+            <ul>
+                <li>
+                    <a href="#">ホーム</a>
+                </li>
+                <li>
+                    <a href="#">ブログ</a>
+                </li>
+                <li>
+                    <a href="#">問い合わせ</a>
+                </li>
+            </ul>
+        </nav> -->
+    </header>
+    <main>
+        <!-- <article>
+            <header>
+                <h1>記事のメインタイトル</h1>
+                <h2>記事のサブタイトル</h2>
+                <time datetime="2022-08-02">2022-08-02</time>
+            </header>
+            <div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque maiores tempore deserunt modi alias
+                    minima illum illo sit quibusdam eius, ipsam ullam. Impedit doloremque repudiandae soluta ipsa unde
+                    laborum optio?
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque maiores tempore deserunt modi alias
+                    minima illum illo sit quibusdam eius, ipsam ullam. Impedit doloremque repudiandae soluta ipsa unde
+                    laborum optio?
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque maiores tempore deserunt modi alias
+                    minima illum illo sit quibusdam eius, ipsam ullam. Impedit doloremque repudiandae soluta ipsa unde
+                    laborum optio?
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque maiores tempore deserunt modi alias
+                    minima illum illo sit quibusdam eius, ipsam ullam. Impedit doloremque repudiandae soluta ipsa unde
+                    laborum optio?
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque maiores tempore deserunt modi alias
+                    minima illum illo sit quibusdam eius, ipsam ullam. Impedit doloremque repudiandae soluta ipsa unde
+                    laborum optio?
+                </p>
+            </div>
+        </article> -->
 
-    <FORM ACTION="https://credit.j-payment.co.jp/link/creditcard/auto-charge/stop?aid=119502&gid=60552392"
-        METHOD="POST">
-        <INPUT class="btn btn-primary" TYPE="submit" NAME="submit" VALUE="退会">
-    </FORM>
+        <FORM ACTION="https://credit.j-payment.co.jp/link/creditcard" METHOD="POST">
+            <INPUT TYPE="HIDDEN" NAME="aid" VALUE="119502">
+            <INPUT TYPE="HIDDEN" NAME="am" VALUE="1800">
+            <INPUT TYPE="HIDDEN" NAME="tx" VALUE="180">
+            <INPUT TYPE="HIDDEN" NAME="sf" VALUE="0">
+            <INPUT TYPE="HIDDEN" NAME="jb" VALUE="CAPTURE">
+            <INPUT TYPE="HIDDEN" NAME="pn" VALUE="0783047760">
+            <INPUT TYPE="HIDDEN" NAME="em" VALUE="s.gi@comnet-network.co.jp">
+            <INPUT TYPE="HIDDEN" NAME="inm" VALUE="CICS">
+            <INPUT TYPE="HIDDEN" NAME="その他" VALUE="01,02,03">
+            <INPUT class="btn btn-primary" TYPE="submit" NAME="submit" VALUE="購入">
+        </FORM>
+
+        <!-- <FORM ACTION="https://credit.j-payment.co.jp/link/creditcard/auto-charge/stop?aid=119502&gid=60552392"
+            METHOD="POST">
+            <INPUT class="btn btn-primary" TYPE="submit" NAME="submit" VALUE="退会">
+        </FORM> -->
+    </main>
+    <footer>
+        <small>
+            @ 2022 Comnet
+        </small>
+    </footer>
 </body>
 
 </html>
