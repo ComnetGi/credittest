@@ -30,6 +30,9 @@ function payBtn() {
     document.getElementById("am").value = priceTaxExcluded;
     document.getElementById("tx").value = tax;
     document.getElementById("userIds").value = userIds;
+    document.getElementById("am2").value = priceTaxExcluded;
+    document.getElementById("tx2").value = tax;
+    document.getElementById("userIds2").value = userIds;
 
 }
 
