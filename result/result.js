@@ -1,5 +1,10 @@
 window.onload = function () {
     const urlParams = new URLSearchParams(window.location.search);
-    document.getElementById("rst").innerHTML = urlParams.get('rst');
-    document.getElementById("その他").innerHTML = urlParams.get('その他');
+    if (urlParams.get('rst') = 1) {
+        document.getElementById("rst").innerHTML = "決済成功";
+        document.getElementById("userIds").innerHTML = urlParams.get('その他').split(',');
+    } else {
+        document.getElementById("rst").innerHTML = "決済失敗";
+    }
+
 }
