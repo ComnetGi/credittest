@@ -35,18 +35,18 @@
         <br><br><br>
         <FORM ACTION="https://credit.j-payment.co.jp/link/creditcard" METHOD="POST">
             <INPUT TYPE="HIDDEN" NAME="aid" VALUE="119502"> <!-- 店舗ID -->
-            <INPUT TYPE="HIDDEN" id="am" NAME="am" VALUE=""> <!-- 商品金額-->
-            <INPUT TYPE="HIDDEN" id="tx" NAME="tx" VALUE=""> <!-- 税金額-->
+            <INPUT TYPE="HIDDEN" id="am" NAME="am" VALUE="1500"> <!-- 商品金額-->
+            <INPUT TYPE="HIDDEN" id="tx" NAME="tx" VALUE="150"> <!-- 税金額-->
             <INPUT TYPE="HIDDEN" NAME="sf" VALUE="0"> <!-- 送料-->
             <INPUT TYPE="HIDDEN" NAME="jb" VALUE="CAPTURE"> <!-- 仮実同時売上固定-->
             <INPUT TYPE="HIDDEN" NAME="pn" VALUE="0783047760"> <!-- 電話番号-->
             <INPUT TYPE="HIDDEN" NAME="cod" VALUE="777"> <!-- オーダー番号（任意）-->
             <INPUT TYPE="HIDDEN" NAME="em" VALUE="s.gi@comnet-network.co.jp"> <!-- Email-->
             <INPUT TYPE="HIDDEN" NAME="actp" VALUE="2"> <!-- 課金周期（毎週課金）-->
-            <INPUT TYPE="HIDDEN" NAME="acam" VALUE=""> <!-- 2回目以降課金税抜き金額-->
-            <INPUT TYPE="HIDDEN" NAME="actx" VALUE=""> <!-- 2回目以降課金税額-->
+            <INPUT TYPE="HIDDEN" NAME="acam" VALUE="1500"> <!-- 2回目以降課金税抜き金額-->
+            <INPUT TYPE="HIDDEN" NAME="actx" VALUE="150"> <!-- 2回目以降課金税額-->
             <INPUT TYPE="HIDDEN" NAME="inm" VALUE="MONJU 1on1"><!-- 商品名-->
-            <INPUT class="btn btn-primary" TYPE="submit" NAME="submit" VALUE="購入" onclick="payBtn()">
+            <INPUT class="btn btn-primary" TYPE="submit" NAME="submit" VALUE="購入">
         </FORM>
 
     </main>
