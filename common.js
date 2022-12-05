@@ -15,12 +15,15 @@ function calc_price_total() {
 
 function payBtn() {
 
-    var billingStartDay = new Date();
-    var billingDay = billingStartDay.getDate();
-    billingStartDay.setDate(billingStartDay.getDate() + 7);
+    var today = new Date();
+    var billingDay = today.getDate();
+    today.setDate(today.getDate() + 7);
+    var year = today.getFullYear();
+    var month = today.getMonth() + 1;
+    var day = today.getDate();
+    var billingStartDay =  year + "/" + month + "/" + day;
 
-    console.log(billingDay);
-    console.log(billingStartDay);
+
 
     document.getElementById("am").value = totalprice;
     document.getElementById("tx").value = totalprice * 0.1;
@@ -28,5 +31,6 @@ function payBtn() {
     document.getElementById("actx").value = totalprice * 0.1;
     document.getElementById("ac1").value = billingDay;
     document.getElementById("ac4").value = billingStartDay;
+
 }
 
