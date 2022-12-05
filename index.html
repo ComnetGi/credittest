@@ -34,7 +34,23 @@
         <label id="lbTotalPrice"></label>
         <br><br><br>
 
-        <INPUT class="btn btn-primary" TYPE="submit" NAME="submit" VALUE="購入" onclick="payBtn()">
+        <FORM ACTION="https://credit.j-payment.co.jp/link/creditcard" METHOD="POST">
+            <INPUT TYPE="HIDDEN" NAME="aid" VALUE="119502"> <!-- 店舗ID -->
+            <INPUT TYPE="HIDDEN" NAME="am" id="am" VALUE=""> <!-- 商品金額-->
+            <INPUT TYPE="HIDDEN" NAME="tx" id="tx" VALUE=""> <!-- 税金額-->
+            <INPUT TYPE="HIDDEN" NAME="sf" VALUE="0"> <!-- 送料-->
+            <INPUT TYPE="HIDDEN" NAME="jb" VALUE="CAPTURE"> <!-- 仮実同時売上固定-->
+            <INPUT TYPE="HIDDEN" NAME="pn" VALUE="0783047760"> <!-- 電話番号-->
+            <INPUT TYPE="HIDDEN" NAME="cod" VALUE="77777"> <!-- オーダー番号（任意）-->
+            <INPUT TYPE="HIDDEN" NAME="em" VALUE="s.gi@comnet-network.co.jp"> <!-- Email-->
+            <INPUT TYPE="HIDDEN" NAME="actp" VALUE="2"> <!-- 課金周期（毎週課金）-->
+            <INPUT TYPE="HIDDEN" NAME="acam" id="acam" VALUE=""> <!-- 2回目以降課金税抜き金額-->
+            <INPUT TYPE="HIDDEN" NAME="actx" id="actx" VALUE=""> <!-- 2回目以降課金税額-->
+            <INPUT TYPE="HIDDEN" NAME="ac1" id="ac1" VALUE=""> <!-- 課金日-->
+            <INPUT TYPE="HIDDEN" NAME="ac4" id="ac4" VALUE=""> <!-- 課金開始日-->
+            <INPUT TYPE="HIDDEN" NAME="inm" VALUE="MONJU 1on1"><!-- 商品名-->
+            <INPUT class="btn btn-primary" TYPE="submit" NAME="submit" VALUE="購入" onclick="payBtn()">
+        </FORM>
 
     </main>
     <footer>
