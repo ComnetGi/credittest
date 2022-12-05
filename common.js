@@ -27,6 +27,8 @@ function payBtn() {
     document.getElementById("acam").value = totalprice;
     document.getElementById("actx").value = totalprice * 0.1;
     document.getElementById("ac4").value = billingStartDay;
+    document.getElementById("tram").value = totalprice;
+    document.getElementById("trtx").value = totalprice * 0.1;
 
 }
 
