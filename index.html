@@ -12,124 +12,43 @@
 
 
 </head>
-<title>Document</title>
+<title>RP自動課金テスト</title>
 
 <body>
     <header>
-        <h1>RobotPaymentクレジット決済機能テスト</h1>
+        <h1>RP自動課金テスト</h1>
     </header>
     <main>
 
         <br><br>
 
-        <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" onclick="checkBtn()">
-            <label class="form-check-label" for="flexSwitchCheckChecked">過去2年以内に購入履歴あり</label>
+        <div class="col-sm-2">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="tbxLicenseNum" placeholder="licenseNum"
+                    onchange="calc_price_total()">
+                <label for="floatingInput">ライセンス数</label>
+            </div>
         </div>
 
-        <br>
-        <h3>ユーザーリスト</h3>
-
-
-
-        <!-- <form name="userlist"> -->
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="300" id="flexCheck1" onclick="calc_price_total()">
-            <label class="form-check-label" for="flexCheck1">
-                Aさん
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="300" id="flexCheck2" onclick="calc_price_total()">
-            <label class="form-check-label" for="flexCheck2">
-                Bさん
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="300" id="flexCheck3" onclick="calc_price_total()">
-            <label class="form-check-label" for="flexCheck3">
-                Cさん
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="300" id="flexCheck4" onclick="calc_price_total()">
-            <label class="form-check-label" for="flexCheck4">
-                Dさん
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="300" id="flexCheck5" onclick="calc_price_total()">
-            <label class="form-check-label" for="flexCheck5">
-                Eさん
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="300" id="flexCheck6" onclick="calc_price_total()">
-            <label class="form-check-label" for="flexCheck6">
-                Fさん
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="300" id="flexCheck7" onclick="calc_price_total()">
-            <label class="form-check-label" for="flexCheck7">
-                Gさん
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="300" id="flexCheck8" onclick="calc_price_total()">
-            <label class="form-check-label" for="flexCheck8">
-                Hさん
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="300" id="flexCheck9" onclick="calc_price_total()">
-            <label class="form-check-label" for="flexCheck9">
-                Iさん
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="300" id="flexCheck10" onclick="calc_price_total()">
-            <label class="form-check-label" for="flexCheck10">
-                Jさん
-            </label>
-        </div>
-
-        合計金額：　<label id="licenseNum">licenseNum</label> ×　<label id="unitPrice">unitPrice</label> = <label
-            id="goukei"></label>
-        <label id="totalPrice">totalPrice</label>
+        合計金額：　<label id="lbLicenseNum">licenseNum</label> ×　<label id="lbUnitPrice">300</label> =
+        <label id="lbTotalPrice"></label>
         <br><br><br>
-        <!-- </form> -->
-        <div id="firstPay">
-            <FORM ACTION="https://credit.j-payment.co.jp/link/onetouch" METHOD="POST">
-                <INPUT TYPE="HIDDEN" NAME="aid" VALUE="119502">
-                <INPUT TYPE="HIDDEN" id="am" NAME="am" VALUE="1800">
-                <INPUT TYPE="HIDDEN" id="tx" NAME="tx" VALUE="180">
-                <INPUT TYPE="HIDDEN" NAME="sf" VALUE="0">
-                <INPUT TYPE="HIDDEN" NAME="jb" VALUE="CAPTURE">
-                <INPUT TYPE="HIDDEN" NAME="pn" VALUE="0783047760">
-                <INPUT TYPE="HIDDEN" NAME="cod" VALUE="777">
-                <INPUT TYPE="HIDDEN" NAME="em" VALUE="s.gi@comnet-network.co.jp">
-                <INPUT TYPE="HIDDEN" NAME="inm" VALUE="cics">
-                <INPUT TYPE="HIDDEN" id="userIds" NAME="その他" VALUE="01,02,03">
-                <INPUT class="btn btn-primary" TYPE="submit" NAME="submit" VALUE="購入" onclick="payBtn()">
-            </FORM>
-        </div>
-        <div id="notFirstPay" style="display: none;">
-            <FORM ACTION="https://credit.j-payment.co.jp/link/onetouch" METHOD="POST">
-                <INPUT TYPE="HIDDEN" NAME="aid" VALUE="119502">
-                <INPUT TYPE="HIDDEN" NAME="pn" VALUE="0783047760">
-                <INPUT TYPE="HIDDEN" NAME="em" VALUE="s.gi@comnet-network.co.jp">
-                <INPUT TYPE="HIDDEN" NAME="cod" VALUE="777">
-                <INPUT TYPE="HIDDEN" NAME="cmd" VALUE="2">
-                <INPUT TYPE="HIDDEN" id="am2" NAME="am" VALUE="1800">
-                <INPUT TYPE="HIDDEN" id="tx2" NAME="tx" VALUE="180">
-                <INPUT TYPE="HIDDEN" NAME="sf" VALUE="0">
-                <INPUT TYPE="HIDDEN" NAME="jb" VALUE="CAPTURE">
-                <INPUT TYPE="HIDDEN" NAME="inm" VALUE="CICS">
-                <INPUT TYPE="HIDDEN" id="userIds2" NAME="その他" VALUE="01,02,03">
-                <INPUT class="btn btn-primary" TYPE="submit" NAME="submit" VALUE="購入2" onclick="payBtn2()">
-            </FORM>
-        </div>
+        <FORM ACTION="https://credit.j-payment.co.jp/link/creditcard" METHOD="POST">
+            <INPUT TYPE="HIDDEN" NAME="aid" VALUE="119502"> <!-- 店舗ID -->
+            <INPUT TYPE="HIDDEN" id="am" NAME="am" VALUE=""> <!-- 商品金額-->
+            <INPUT TYPE="HIDDEN" id="tx" NAME="tx" VALUE=""> <!-- 税金額-->
+            <INPUT TYPE="HIDDEN" NAME="sf" VALUE="0"> <!-- 送料-->
+            <INPUT TYPE="HIDDEN" NAME="jb" VALUE="CAPTURE"> <!-- 仮実同時売上固定-->
+            <INPUT TYPE="HIDDEN" NAME="pn" VALUE="0783047760"> <!-- 電話番号-->
+            <INPUT TYPE="HIDDEN" NAME="cod" VALUE="777"> <!-- オーダー番号（任意）-->
+            <INPUT TYPE="HIDDEN" NAME="em" VALUE="s.gi@comnet-network.co.jp"> <!-- Email-->
+            <INPUT TYPE="HIDDEN" NAME="actp" VALUE="2"> <!-- 課金周期（毎週課金）-->
+            <INPUT TYPE="HIDDEN" NAME="acam" VALUE=""> <!-- 2回目以降課金税抜き金額-->
+            <INPUT TYPE="HIDDEN" NAME="actx" VALUE=""> <!-- 2回目以降課金税額-->
+            <INPUT TYPE="HIDDEN" NAME="inm" VALUE="MONJU 1on1"><!-- 商品名-->
+            <INPUT class="btn btn-primary" TYPE="submit" NAME="submit" VALUE="購入" onclick="payBtn()">
+        </FORM>
+
     </main>
     <footer>
         <small>
