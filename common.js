@@ -17,7 +17,7 @@ function payBtn() {
 
     var today = new Date();
     var billingDay = today.getDate();
-    today.setMonth(today.getMonth() + 1);
+    today.setDate(today.getDay() + 7);
     var year = today.getFullYear();
     var month = today.getMonth() + 1;
     var day = today.getDate();
@@ -26,6 +26,7 @@ function payBtn() {
     console.log(billingDay);
     console.log(billingStartDay);
     document.getElementById("ac1").value = billingDay;
+    document.getElementById("ac4").value = billingStartDay;
     document.getElementById("acam").value = totalprice;
     document.getElementById("actx").value = totalprice * 0.1;
 
