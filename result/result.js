@@ -27,6 +27,5 @@ window.onload = function () {
     document.getElementById("inm").innerHTML = urlParams.get('inm');
     document.getElementById("acid").innerHTML = urlParams.get('acid');
 
-
 }
 　　　
